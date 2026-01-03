@@ -1,51 +1,78 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 clear
-echo "🔵 CYBER AZUL AMOLED PACK 🔵"
-echo "🚀 Projeto Termux v1.0"
+echo "🔵 Projeto Termux — Cyber Azul AMOLED"
+echo "🚀 Instalador automático v1.1"
 echo
 
-pkg update -y
-pkg install -y git zsh termux-api curl
+# ===============================
+# VERIFICAÇÃO: TERMUX
+# ===============================
+if [ ! -d "/data/data/com.termux" ]; then
+  echo "❌ Este script deve ser executado no Termux"
+  exit 1
+fi
 
-# Backup
-echo "📦 Criando backup..."
+# ===============================
+# DEPENDÊNCIAS
+# ===============================
+pkg update -y
+pkg install -y git zsh curl termux-api
+
+# ===============================
+# BACKUP AUTOMÁTICO
+# ===============================
+echo "📦 Criando backup automático..."
 mkdir -p ~/.backup-termux
 cp ~/.zshrc ~/.p10k.zsh ~/.backup-termux 2>/dev/null
 
-# Oh My Zsh
+# ===============================
+# OH MY ZSH (SILENCIOSO)
+# ===============================
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo "⚡ Instalando Oh My Zsh..."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  RUNZSH=no CHSH=no KEEP_ZSHRC=yes \
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-# Plugins
 ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
+# ===============================
+# PLUGINS
+# ===============================
 git clone https://github.com/zsh-users/zsh-autosuggestions \
   $ZSH_CUSTOM/plugins/zsh-autosuggestions 2>/dev/null
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting \
   $ZSH_CUSTOM/plugins/zsh-syntax-highlighting 2>/dev/null
 
-# Powerlevel10k
+# ===============================
+# POWERLEVEL10K
+# ===============================
 git clone https://github.com/romkatv/powerlevel10k.git \
   $ZSH_CUSTOM/themes/powerlevel10k 2>/dev/null
 
-# Copiar configs
+# ===============================
+# CONFIGURAÇÕES
+# ===============================
 echo "🎨 Aplicando tema Cyber Azul..."
 cp files/zshrc ~/.zshrc
 cp files/p10k.zsh ~/.p10k.zsh
 
-# ZSH padrão
+# ===============================
+# ZSH PADRÃO
+# ===============================
 chsh -s zsh
 
+# ===============================
+# FINAL
+# ===============================
 echo
-echo "✅ INSTALAÇÃO FINALIZADA!"
+echo "✅ INSTALAÇÃO CONCLUÍDA COM SUCESSO"
 echo
-echo "⚠️ PASSO OBRIGATÓRIO:"
-echo "Termux → Settings → Appearance → Color scheme"
-echo "👉 Selecione: White On Black"
-echo "👉 Feche e abra o Termux"
+echo "⚠️ PASSO FINAL OBRIGATÓRIO:"
+echo "Termux → Settings → Appearance"
+echo "Color scheme → White On Black"
+echo "Depois feche e abra o Termux"
 echo
-echo "🔥 Bem-vindo ao Cyber Azul AMOLED 😈"
+echo "😈 Bem-vindo ao Cyber Azul AMOLED"
