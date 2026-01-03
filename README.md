@@ -23,6 +23,7 @@ Copie e cole no **Termux**:
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Diviscript/Projeto-termux/main/install.sh | bash
 
+##
 ⚠️ Passo obrigatório após instalar
 Após finalizar a instalação:
 Abra Termux
