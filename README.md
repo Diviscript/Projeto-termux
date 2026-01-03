@@ -1,16 +1,16 @@
 # 🚀 Projeto Termux — Cyber Azul AMOLED
 
-Pack instalável para **Termux** com visual **Cyber Azul**, fundo **AMOLED (preto real)**,
-ZSH, Oh My Zsh e Powerlevel10k.
+Pack visual e funcional para **Termux** com tema **Cyber Azul**, fundo **AMOLED (preto real)**,
+utilizando **ZSH**, **Oh My Zsh** e **Powerlevel10k**.
 
 ---
 
 ## ✨ O que este projeto instala
 - ZSH configurado
 - Oh My Zsh
-- Powerlevel10k
-- Autosuggestions
-- Syntax Highlighting
+- Powerlevel10k (p10k)
+- ZSH Autosuggestions
+- ZSH Syntax Highlighting
 - Tema **Cyber Azul**
 - Fundo **AMOLED (preto puro)**
 
@@ -22,26 +22,3 @@ Copie e cole no **Termux**:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Diviscript/Projeto-termux/main/install.sh | bash
-
-##
-⚠️ Passo obrigatório após instalar
-Após finalizar a instalação:
-Abra Termux
-Vá em Settings → Appearance
-Em Color scheme, selecione:
-White On Black
-Feche e abra o Termux novamente
-
-🧪 Testado em
-Android
-Termux (Play Store / F-Droid)
-ZSH + Powerlevel10k
-
-🔐 Segurança
-O comando curl | bash é usado apenas para facilitar a instalação.
-Todo o código é aberto e pode ser auditado neste repositório.
-
-👨‍💻 Autor
-Diviscript
-
-⭐ Se gostou do projeto, deixe uma estrela!
