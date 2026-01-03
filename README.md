@@ -24,8 +24,13 @@ Copie e cole no **Termux**:
 curl -fsSL https://raw.githubusercontent.com/Diviscript/Projeto-termux/main/install.sh | bash
 ```
 ---
+##🧹 Desinstalar
+```bash
+uninstall.sh
 
-⚠️ Passo obrigatório após instalar
+```
+
+##⚠️ Passo obrigatório após instalar
 Após finalizar a instalação:
 Abra Termux
 Vá em Settings → Appearance
@@ -35,14 +40,14 @@ Feche e abra o Termux novamente
 
 ---
 
-🔐 Segurança
+##🔐 Segurança
 O comando curl | bash é utilizado apenas para facilitar a instalação.
 Todo o código é aberto e pode ser auditado neste repositório.
 
-🧪 Testado em
+##🧪 Testado em
 Android
 Termux (Play Store / F-Droid)
 ZSH + Powerlevel10k
 
-👨‍💻 Autor
+##👨‍💻 Autor
 Diviscript
