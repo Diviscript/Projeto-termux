@@ -26,7 +26,7 @@ curl -fsSL https://raw.githubusercontent.com/Diviscript/Projeto-termux/main/inst
 ---
 ##🧹 Desinstalar
 ```bash
-uninstall.sh
+curl -fsSL https://raw.githubusercontent.com/Diviscript/Projeto-termux/main/uninstall.sh | bash
 
 ```
 
