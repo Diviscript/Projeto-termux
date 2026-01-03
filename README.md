@@ -16,9 +16,38 @@ utilizando **ZSH**, **Oh My Zsh** e **Powerlevel10k**.
 
 ---
 
+⚠️ Passo obrigatório após instalar
+Após finalizar a instalação:
+Abra Termux
+Vá em Settings → Appearance
+Em Color scheme, selecione:
+White On Black
+Feche e abra o Termux novamente
+
+---
+
+🔐 Segurança
+O comando curl | bash é utilizado apenas para facilitar a instalação.
+Todo o código é aberto e pode ser auditado neste repositório.
+
+---
+
+🧪 Testado em
+Android
+Termux (Play Store / F-Droid)
+ZSH + Powerlevel10k
+
+---
+
+👨‍💻 Autor
+Diviscript
+
+---
+
 ## 📲 Instalação (1 comando)
 
 Copie e cole no **Termux**:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Diviscript/Projeto-termux/main/install.sh | bash
+
